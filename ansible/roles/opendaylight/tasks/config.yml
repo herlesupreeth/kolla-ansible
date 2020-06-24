@@ -105,6 +105,17 @@
   notify:
     - Restart opendaylight container
 
+- name: Copying over netvirt-natservice-config.xml
+  template:
+    src: "{{ role_path }}/templates/netvirt-natservice-config.xml.j2"
+    dest: "{{ node_config_directory }}/{{ item }}/netvirt-natservice-config.xml"
+    mode: "0660"
+  become: true
+  with_items:
+    - "opendaylight"
+  notify:
+    - Restart opendaylight container
+
 - name: Copying over netvirt-aclservice-config.xml
   template:
     src: "{{ role_path }}/templates/netvirt-aclservice-config.xml.j2"

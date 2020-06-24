@@ -50,6 +50,12 @@
             "perm": "0600"
         },
         {
+            "source": "{{ container_config_directory }}/netvirt-natservice-config.xml",
+            "dest": "/opt/opendaylight/etc/opendaylight/datastore/initial/config/netvirt-natservice-config.xml",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
             "source": "{{ container_config_directory }}/netvirt-aclservice-config.xml",
             "dest": "/opt/opendaylight/etc/opendaylight/datastore/initial/config/netvirt-aclservice-config.xml",
             "owner": "odl",
