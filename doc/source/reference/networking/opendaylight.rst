@@ -27,10 +27,11 @@ OpenDaylight ``globals.yml`` configurable options with their defaults include:
 
    opendaylight_mechanism_driver: "opendaylight_v2"
    opendaylight_l3_service_plugin: "odl-router_v2"
-   opendaylight_acl_impl: "learn"
+   opendaylight_acl_impl: "stateful"
    enable_opendaylight_qos: "no"
    enable_opendaylight_l3: "yes"
    enable_opendaylight_legacy_netvirt_conntrack: "no"
+   opendaylight_snat_mode: "controller"
    opendaylight_port_binding_type: "pseudo-agentdb-binding"
    opendaylight_features: "odl-mdsal-apidocs,odl-netvirt-openstack"
    opendaylight_allowed_network_types: '"flat", "vlan", "vxlan"'
